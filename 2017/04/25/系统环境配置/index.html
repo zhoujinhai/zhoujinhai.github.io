@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>hexo系统环境配置 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="Hexo" />
+  
+  
+  
+  
+  <meta name="description" content="系统环境配置要使用Hexo，需要在你的系统中支持Nodejs以及Git，如果还没有，那就开始安装吧！ 安装Node.js下载Node.js参考地址：安装Node.js 安装Git下载地址：http://git-scm.com/download/">
+<meta name="keywords" content="Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo系统环境配置">
+<meta property="og:url" content="http://yoursite.com/2017/04/25/系统环境配置/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="系统环境配置要使用Hexo，需要在你的系统中支持Nodejs以及Git，如果还没有，那就开始安装吧！ 安装Node.js下载Node.js参考地址：安装Node.js 安装Git下载地址：http://git-scm.com/download/">
+<meta property="og:image" content="http://yoursite.com/img/yIVFfaZ.png!web">
+<meta property="og:updated_time" content="2017-05-11T02:04:46.317Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo系统环境配置">
+<meta name="twitter:description" content="系统环境配置要使用Hexo，需要在你的系统中支持Nodejs以及Git，如果还没有，那就开始安装吧！ 安装Node.js下载Node.js参考地址：安装Node.js 安装Git下载地址：http://git-scm.com/download/">
+<meta name="twitter:image" content="http://yoursite.com/img/yIVFfaZ.png!web">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+
+  
+
+  <link rel="icon" href="/css/images/mylogo.jpg">
+  <link rel="apple-touch-icon" href="/css/images/mylogo.jpg">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+
+  
+    <link rel="stylesheet" href="/css/dialog.css">
+  
+
+  
+    <link rel="stylesheet" href="/css/header-post.css" >
+  
+
+  
+  
+  
+    <link rel="stylesheet" href="/css/vdonate.css" >
+  
+
+</head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+  <div id="container">
+    <div id="wrap">
+      
+        <header>
+
+    <div id="allheader" class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navbar-inner">
+          
+          <div class="container"> 
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            
+              <a class="brand" style="
+                 margin-top: 0px;"  
+                href="#" data-toggle="modal" data-target="#myModal" >
+                  <img width="124px" height="124px" alt="Hike News" src="/css/images/mylogo.jpg">
+              </a>
+            
+            
+            <div class="navbar-collapse collapse">
+              <ul class="hnav navbar-nav">
+                
+                  <li> <a class="main-nav-link" href="/">首页</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/archives">归档</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/categories">分类</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/tags">标签</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/about">关于</a> </li>
+                
+                  <li><div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div></li>
+            </div>
+          </div>
+                
+      </div>
+    </div>
+
+</header>
+
+
+
+      
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-系统环境配置" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      Hexo系统环境配置
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/04/25/系统环境配置/" class="article-date">
+	  <time datetime="2017-04-25T01:54:35.000Z" itemprop="datePublished">2017-04-25</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="系统环境配置"><a href="#系统环境配置" class="headerlink" title="系统环境配置"></a>系统环境配置</h2><p>要使用Hexo，需要在你的系统中支持Nodejs以及Git，如果还没有，那就开始安装吧！</p>
+<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p><a href="https://nodejs.org/download/" target="_blank" rel="external">下载Node.js</a><br>参考地址：<a href="http://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="external">安装Node.js</a></p>
+<h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p>下载地址：<a href="http://git-scm.com/download/" target="_blank" rel="external">http://git-scm.com/download/</a></p>
+<a id="more"></a>
+<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> d:/hexo</div><div class="line">$ npm install hexo-cli -g</div><div class="line">$ hexo init blog</div><div class="line">$ <span class="built_in">cd</span> blog</div><div class="line">$ npm install</div><div class="line">$ hexo g <span class="comment"># 或者hexo generate</span></div><div class="line">$ hexo s <span class="comment"># 或者hexo server，可以在http://localhost:4000/ 查看</span></div></pre></td></tr></table></figure>
+<p>这里有必要提下Hexo常用的几个命令：</p>
+<p>1.hexo generate (hexo g) 生成静态文件，会在当前目录下生成一个新的叫做public的文件夹<br>2.hexo server (hexo s) 启动本地web服务，用于博客的预览<br>3.hexo deploy (hexo d) 部署播客到远端（比如github, heroku等平台）</p>
+<p>另外还有其他几个常用命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"postName"</span> <span class="comment">#新建文章</span></div><div class="line">$ hexo new page <span class="string">"pageName"</span> <span class="comment">#新建页面</span></div></pre></td></tr></table></figure>
+<p>常用简写</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ hexo n == hexo new</div><div class="line">$ hexo g == hexo generate</div><div class="line">$ hexo s == hexo server</div><div class="line">$ hexo d == hexo deploy</div></pre></td></tr></table></figure>
+<p>常用组合</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo d -g <span class="comment">#生成部署</span></div><div class="line">$ hexo s -g <span class="comment">#生成预览</span></div></pre></td></tr></table></figure>
+<p>现在我们打开<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> 已经可以看到一篇内置的blog了。</p>
+<h2 id="Hexo的配置"><a href="#Hexo的配置" class="headerlink" title="Hexo的配置"></a>Hexo的配置</h2><p><img src="/img/yIVFfaZ.png!web" alt="目录"></p>
+<h3 id="目录和文件"><a href="#目录和文件" class="headerlink" title="目录和文件"></a>目录和文件</h3><p>1、 scaffolds ：模板文件夹，新建文章时，Hexo 会根据 scaffold 来建立文件。Hexo 有三种默认布局： post 、 page 和 draft ，它们分别对应不同的路径。新建文件的默认布局是 post ，可以在配置文件中更改布局。用 draft 布局生成的文件会被保存到 source/_drafts 文件夹。</p>
+<p>2、 source ：资源文件夹是存放用户资源的地方。</p>
+<p>3、 source/_post ：文件箱。（低版本的hexo还会存在一个 _draft ，这是草稿箱）除 <em>posts 文件夹之外，开头命名为 </em> (下划线)的文件/ 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 public 文件夹，而其他文件会被拷贝过去</p>
+<p>4、 themes ：主题 文件夹。Hexo 会根据主题来生成静态页面。</p>
+<p>5、 themes/landscape ：默认的皮肤文件夹</p>
+<p>6、 _config.yml ：全局的配置文件，每次更改要重启服务。</p>
+<p>低版本的Hexo还会生成scripts文件夹，里面用于保存扩展Hexo的脚本文件。</p>
+<h3 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h3><p>可以在 _config.yml 中修改：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Hexo Configuration</span></div><div class="line"><span class="comment">## Docs: http://hexo.io/docs/configuration.html</span></div><div class="line"><span class="comment">## Source: https://github.com/hexojs/hexo/</span></div><div class="line"><span class="comment"># Site 站点配置</span></div><div class="line">title: Hexo-demo <span class="comment">#网站标题</span></div><div class="line">subtitle: hexo is simple and easy to study <span class="comment">#网站副标题</span></div><div class="line">description: this is hexo-demo <span class="comment">#网栈描述</span></div><div class="line">author: pomy <span class="comment">#你的名字</span></div><div class="line">language: zh-CN <span class="comment">#网站使用的语言</span></div><div class="line">timezone: Asia/Shanghai <span class="comment">#网站时区</span></div><div class="line"><span class="comment"># URL #可以不用配置</span></div><div class="line"><span class="comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></div><div class="line">url: http://yoursite.com <span class="comment">#网址，搜索时会在搜索引擎中显示</span></div><div class="line">root: / <span class="comment">#网站根目录</span></div><div class="line">permalink: :year/:month/:day/:title/ <span class="comment">#永久链接格式</span></div><div class="line">permalink_defaults: <span class="comment">#永久链接中各部分的默认值</span></div><div class="line"><span class="comment"># Directory 目录配置</span></div><div class="line">source_dir: <span class="built_in">source</span> <span class="comment">#资源文件夹，这个文件夹用来存放内容</span></div><div class="line">public_dir: public <span class="comment">#公共文件夹，这个文件夹用于存放生成的站点文件</span></div><div class="line">tag_dir: tags <span class="comment">#标签文件夹</span></div><div class="line">archive_dir: archives <span class="comment">#归档文件夹</span></div><div class="line">category_dir: categories <span class="comment">#分类文件夹</span></div><div class="line">code_dir: downloads/code <span class="comment">#Include code 文件夹</span></div><div class="line">i18n_dir: :lang <span class="comment">#国际化文件夹</span></div><div class="line">skip_render: <span class="comment">#跳过指定文件的渲染，您可使用 glob 来配置路径</span></div><div class="line"><span class="comment"># Writing 写作配置</span></div><div class="line">new_post_name: :title.md <span class="comment"># 新文章的文件名称</span></div><div class="line">default_layout: post <span class="comment">#默认布局</span></div><div class="line">titlecase: <span class="literal">false</span> <span class="comment"># Transform title into titlecase</span></div><div class="line">external_link: <span class="literal">true</span> <span class="comment"># Open external links in new tab</span></div><div class="line">filename_case: 0 <span class="comment">#把文件名称转换为 (1) 小写或 (2) 大写</span></div><div class="line">render_drafts: <span class="literal">false</span> <span class="comment">#显示草稿</span></div><div class="line">post_asset_folder: <span class="literal">false</span> <span class="comment">#是否启动资源文件夹</span></div><div class="line">relative_link: <span class="literal">false</span> <span class="comment">#把链接改为与根目录的相对位址</span></div><div class="line">future: <span class="literal">true</span></div><div class="line">highlight: <span class="comment">#代码块的设置</span></div><div class="line"><span class="built_in">enable</span>: <span class="literal">true</span></div><div class="line">line_number: <span class="literal">true</span></div><div class="line">auto_detect: <span class="literal">true</span></div><div class="line">tab_replace:</div><div class="line"><span class="comment"># Category &amp; Tag 分类 &amp; 标签</span></div><div class="line">default_category: uncategorized <span class="comment">#默认分类</span></div><div class="line">category_map: <span class="comment">#分类别名</span></div><div class="line">tag_map: <span class="comment">#标签别名</span></div><div class="line"><span class="comment"># Date / Time format 时间和日期</span></div><div class="line"><span class="comment">## Hexo uses Moment.js to parse and display date</span></div><div class="line"><span class="comment">## You can customize the date format as defined in</span></div><div class="line"><span class="comment">## http://momentjs.com/docs/#/displaying/format/</span></div><div class="line">date_format: YYYY-MM-DD</div><div class="line">time_format: HH:mm:ss</div><div class="line"><span class="comment"># Pagination 分页</span></div><div class="line"><span class="comment">## Set per_page to 0 to disable pagination</span></div><div class="line">per_page: 10 <span class="comment">#每页显示的文章量 (0 = 关闭分页功能)</span></div><div class="line">pagination_dir: page <span class="comment">#分页目录</span></div><div class="line"><span class="comment"># Extensions 扩展</span></div><div class="line"><span class="comment">## Plugins: http://hexo.io/plugins/ 插件</span></div><div class="line"><span class="comment">## Themes: http://hexo.io/themes/ 主题</span></div><div class="line">theme: landscape <span class="comment">#当前主题名称</span></div><div class="line"><span class="comment"># Deployment #部署到github</span></div><div class="line"><span class="comment">## Docs: http://hexo.io/docs/deployment.html</span></div><div class="line">deploy:</div><div class="line"><span class="built_in">type</span>:</div></pre></td></tr></table></figure>
+<h4 id="修改全局配置时，注意缩进，同时注意冒号后面要有一个空格。"><a href="#修改全局配置时，注意缩进，同时注意冒号后面要有一个空格。" class="headerlink" title="修改全局配置时，注意缩进，同时注意冒号后面要有一个空格。"></a>修改全局配置时，注意缩进，同时注意冒号后面要有一个空格。</h4>
+      
+    </div>
+    <footer class="article-footer">
+      
+        <div id="donation_div"></div>
+
+<script src="/js/vdonate.js"></script>
+<script>
+var a = new Donate({
+  title: '如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作!', // 可选参数，打赏标题
+  btnText: '打赏支持', // 可选参数，打赏按钮文字
+  el: document.getElementById('donation_div'),
+  wechatImage: 'https://raw.githubusercontent.com/iTimeTraveler/iTimeTraveler.github.io/site/source/about/donate/images/WeChanQR.png',
+  alipayImage: 'https://raw.githubusercontent.com/iTimeTraveler/iTimeTraveler.github.io/site/source/about/donate/images/AliPayQR.jpg'
+});
+</script>
+      
+      
+        
+	<section id="comments" class="comment">
+	  <div id="disqus_thread">
+	  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	  </div>
+	</section>
+
+	<script type="text/javascript">
+	var disqus_shortname = 'iTimeTraveler';
+	(function(){
+	  var dsq = document.createElement('script');
+	  dsq.type = 'text/javascript';
+	  dsq.async = true;
+	  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+	(function(){
+	  var dsq = document.createElement('script');
+	  dsq.type = 'text/javascript';
+	  dsq.async = true;
+	  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+	  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+	</script>
+
+
+
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/04/25/主题配置/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          Hexo主题配置
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/04/24/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="toc-sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#系统环境配置"><span class="nav-number">1.</span> <span class="nav-text">系统环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Node-js"><span class="nav-number">1.1.</span> <span class="nav-text">安装Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Git"><span class="nav-number">1.2.</span> <span class="nav-text">安装Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number">1.3.</span> <span class="nav-text">安装Hexo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo的配置"><span class="nav-number">2.</span> <span class="nav-text">Hexo的配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#目录和文件"><span class="nav-number">2.1.</span> <span class="nav-text">目录和文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#全局配置"><span class="nav-number">2.2.</span> <span class="nav-text">全局配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#修改全局配置时，注意缩进，同时注意冒号后面要有一个空格。"><span class="nav-number">2.2.1.</span> <span class="nav-text">修改全局配置时，注意缩进，同时注意冒号后面要有一个空格。</span></a></li></ol></li></ol></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      
+      <footer id="footer">
+  
+
+  <div class="container">
+      	<div class="row">
+	      <p> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="https://zhoujinhai.github.io/" target="_blank">Hexo-theme-hiker</a> </p>
+	      <p id="copyRightEn">Copyright &copy; 2017 - 2017 Hexo All Rights Reserved.</p>
+	      
+	      
+    		<p class="busuanzi_uv">
+				访客数 : <span id="busuanzi_value_site_uv"></span> |  
+				访问量 : <span id="busuanzi_value_site_pv"></span>
+		    </p>
+  		   
+		</div>
+
+		
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheader = document.getElementById("allheader");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    if (allheader != null) {
+      contentdiv.style.minHeight = document.body.offsetHeight - allheader.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    } else {
+      contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    }
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+<script src="/js/bootstrap.js"></script>
+
+
+
+
+  <script src="/js/dialog.js"></script>
+
+
+
+
+
+
+
+
+	<div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">设置</h2>
+      </div>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              正文字号大小
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            您已调整页面字体大小
+          </div>
+        </div>
+      
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              夜间护眼模式
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            夜间模式已经开启，再次单击按钮即可关闭 
+          </div>
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关 于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            Hexo
+          </div>
+          <div class="panel-body">
+            Copyright © 2017 Jinhai Zhou All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+</body>
+</html>
